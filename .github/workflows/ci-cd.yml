@@ -29,7 +29,7 @@ jobs:
         
       - name: Notify on failure
         if: failure()
-        uses: SlothyKoala
+        uses: rtCamp/action-slack-notify@v2
         with:
           server_address: .github/workflows/ci-cd.yml
           server_port: 587
