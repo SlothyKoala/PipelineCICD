@@ -29,8 +29,12 @@ jobs:
         
       - name: Notify on failure
         if: failure()
-        uses: rtCamp/action-slack-notify@v2
+        uses: dawidd6/action-send-mail@v2
         with:
-          status: failure
-          message: 'Build or deployment failed'
-          slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          server_address: https://armandctu.slack.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Build or deployment failed
+          body: The build or deployment has failed. Please check the logs for details.
+          to: aneethling21@gmail.com  # Email address to receive the notification
