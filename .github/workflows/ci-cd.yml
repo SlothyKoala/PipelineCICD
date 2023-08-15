@@ -31,7 +31,7 @@ jobs:
         if: failure()
         uses: SlothyKoala
         with:
-          server_address: https://armandctu.slack.com
+          server_address: .github/workflows/ci-cd.yml
           server_port: 587
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
