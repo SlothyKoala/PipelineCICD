@@ -1,4 +1,4 @@
-#Key
+# Key
 import secrets
 import string
 
